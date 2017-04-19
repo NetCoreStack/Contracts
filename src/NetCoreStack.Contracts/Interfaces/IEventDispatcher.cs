@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace NetCoreStack.Contracts.Interfaces
+namespace NetCoreStack.Contracts
 {
     public interface IEventDispatcher
     {

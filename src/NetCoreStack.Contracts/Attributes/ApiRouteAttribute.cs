@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCoreStack.Contracts.Attributes
+namespace NetCoreStack.Contracts
 {
     [AttributeUsage(AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
     public sealed class ApiRouteAttribute : Attribute

@@ -1,20 +1,15 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace NetCoreStack.Contracts
 {
     public abstract class CollectionResultBase
     {
-        [JsonProperty("draw")]
         public int Draw { get; set; }
+        
+        public long RecordsTotal { get; set; }
+        
+        public long RecordsFiltered { get; set; }
 
-        [JsonProperty("recordsTotal")]
-        public long TotalRecords { get; set; }
-
-        [JsonProperty("recordsFiltered")]
-        public long TotalRecordsFiltered { get; set; }
-
-        [JsonProperty("error")]
         public object Error { get; set; }
     }
     

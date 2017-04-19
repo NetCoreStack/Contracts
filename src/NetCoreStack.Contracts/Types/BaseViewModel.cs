@@ -3,7 +3,7 @@
     public class BaseViewModel
     {
         [PropertyDescriptor(IsIdentity = true)]
-        public long? ID { get; set; }
+        public long? Id { get; set; }
 
         public ObjectState ObjectState { get; set; }
         
@@ -14,7 +14,7 @@
         {
             get
             {
-                if (ID.HasValue && ID.Value > 0)
+                if (Id.HasValue && Id.Value > 0)
                     return false;
                 return true;
             }

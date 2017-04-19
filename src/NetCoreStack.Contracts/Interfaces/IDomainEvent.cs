@@ -1,4 +1,4 @@
-﻿namespace NetCoreStack.Contracts.Interfaces
+﻿namespace NetCoreStack.Contracts
 {
     public interface IDomainEvent
     {

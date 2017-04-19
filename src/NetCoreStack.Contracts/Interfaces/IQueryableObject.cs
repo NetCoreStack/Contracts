@@ -2,6 +2,6 @@
 {
     public interface IQueryableObject
     {
-        long ID { get; set; }
+        long Id { get; set; }
     }
 }

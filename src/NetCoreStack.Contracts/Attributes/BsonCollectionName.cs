@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCoreStack.Contracts.Attributes
+namespace NetCoreStack.Contracts
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = true)]
     public class BsonCollectionName : Attribute
