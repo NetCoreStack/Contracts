@@ -1,0 +1,11 @@
+﻿namespace NetCoreStack.Contracts
+{
+    public enum StorageType
+    {
+        Unset = 0,
+        Local = 1,
+        Network = 2,
+        Ftp = 3,
+        Cloud = 4
+    }
+}
