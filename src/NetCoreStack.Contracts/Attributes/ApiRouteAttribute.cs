@@ -10,10 +10,10 @@ namespace NetCoreStack.Contracts.Attributes
 
         public ApiRouteAttribute(string routeTemplate, string regionKey)
         {
-            if (!routeTemplate.HasValue())
+            if (string.IsNullOrEmpty(routeTemplate))
                 throw new ArgumentNullException(nameof(routeTemplate));
 
-            if (!regionKey.HasValue())
+            if (string.IsNullOrEmpty(regionKey))
                 throw new ArgumentNullException(nameof(regionKey));
 
             RegionKey = regionKey;
