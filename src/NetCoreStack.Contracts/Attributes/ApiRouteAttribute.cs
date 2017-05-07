@@ -16,6 +16,7 @@ namespace NetCoreStack.Contracts
             if (string.IsNullOrEmpty(regionKey))
                 throw new ArgumentNullException(nameof(regionKey));
 
+            RouteTemplate = routeTemplate;
             RegionKey = regionKey;
         }
     }
