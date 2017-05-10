@@ -5,6 +5,6 @@ namespace NetCoreStack.Contracts
     public abstract class EntityBase : IObjectState
     {
         [NotMapped]
-        public ObjectState ObjectState { get; set; }
+        public virtual ObjectState ObjectState { get; set; }
     }
 }
