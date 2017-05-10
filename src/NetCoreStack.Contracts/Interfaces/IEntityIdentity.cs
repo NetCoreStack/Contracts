@@ -1,6 +1,6 @@
 ﻿namespace NetCoreStack.Contracts
 {
-    public interface IQueryableObject<TKey>
+    public interface IEntityIdentity<TKey> : IObjectState
     {
         TKey Id { get; set; }
     }

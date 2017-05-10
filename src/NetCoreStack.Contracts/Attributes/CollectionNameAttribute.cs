@@ -2,10 +2,10 @@
 
 namespace NetCoreStack.Contracts
 {
-    [AttributeUsage(AttributeTargets.Class, Inherited = true)]
-    public class BsonCollectionName : Attribute
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    public sealed class CollectionNameAttribute : Attribute
     {
-        public BsonCollectionName(string name)
+        public CollectionNameAttribute(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentNullException(nameof(name));
