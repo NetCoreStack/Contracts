@@ -1,6 +1,6 @@
 ﻿namespace NetCoreStack.Contracts
 {
-    public interface IObjectState
+    public interface IEntity
     {
         ObjectState ObjectState { get; set; }
     }

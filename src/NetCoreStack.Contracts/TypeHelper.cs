@@ -11,7 +11,7 @@ namespace NetCoreStack.Contracts
     {
         public static bool IsEntity(Type type)
         {
-            return typeof(EntityBase).IsAssignableFrom(type);
+            return typeof(IEntity).IsAssignableFrom(type);
         }
 
         public static bool IsViewModel(Type type)
