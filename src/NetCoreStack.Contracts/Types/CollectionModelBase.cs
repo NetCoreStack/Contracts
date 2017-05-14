@@ -7,9 +7,9 @@
             get
             {
                 if (Id > 0)
-                    return true;
+                    return false;
 
-                return false;
+                return true;
             }
         }
     }
@@ -21,9 +21,9 @@
             get
             {
                 if (!string.IsNullOrEmpty(Id))
-                    return true;
+                    return false;
 
-                return false;
+                return true;
             }
         }
     }
