@@ -25,16 +25,6 @@ namespace NetCoreStack.Contracts
             return false;
         }
 
-        public static bool IsTransient(Type type)
-        {
-            return typeof(ITransientDependency).IsAssignableFrom(type);
-        }
-
-        public static bool IsSingleton(Type type)
-        {
-            return typeof(ISingletonDependency).IsAssignableFrom(type);
-        }
-
         public static string GetMemberName<T, TValue>(Expression<Func<T, TValue>> memberAccess)
         {
             return ((MemberExpression)memberAccess.Body).Member.Name;
