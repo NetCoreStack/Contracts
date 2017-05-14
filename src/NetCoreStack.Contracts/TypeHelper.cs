@@ -14,14 +14,15 @@ namespace NetCoreStack.Contracts
             return typeof(IEntity).IsAssignableFrom(type);
         }
 
-        public static bool IsViewModel(Type type)
+        public static bool IsCollection(Type type)
         {
-            return typeof(BaseViewModel).IsAssignableFrom(type);
-        }
+            if (typeof(CollectionModel).IsAssignableFrom(type) ||
+                typeof(CollectionModelBson).IsAssignableFrom(type))
+            {
+                return true;
+            }
 
-        public static bool IsCompositeType(Type type)
-        {
-            return typeof(BaseCompositeType).IsAssignableFrom(type);
+            return false;
         }
 
         public static bool IsTransient(Type type)
