@@ -1,8 +1,14 @@
-﻿namespace NetCoreStack.Contracts
+﻿using System.Collections.Generic;
+
+namespace NetCoreStack.Contracts
 {
     public class AppSettings
     {
         public string Name { get; set; }
+        public string UploadRootPath { get; set; } = "contents";
+        public string[] SysAdmins { get; set; }
+        public Dictionary<string, string> Environments { get; set; }
+        public Dictionary<string, string> ApiRegionKeys { get; set; }
     }
 
     public class ServerSettings : AppSettings
