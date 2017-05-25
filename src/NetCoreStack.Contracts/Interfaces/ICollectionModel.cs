@@ -1,8 +1,7 @@
 ﻿namespace NetCoreStack.Contracts
 {
-    public interface ICollectionModel<TKey>
+    public interface ICollectionModel<TKey> : IModelKey<TKey>
     {
-        TKey Id { get; set; }
         ObjectState ObjectState { get; set; }
     }
 }

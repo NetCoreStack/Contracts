@@ -5,7 +5,6 @@ namespace NetCoreStack.Contracts
     public class AppSettings
     {
         public string Name { get; set; }
-        public string UploadRootPath { get; set; } = "contents";
         public string[] SysAdmins { get; set; }
         public Dictionary<string, string> Environments { get; set; }
     }
