@@ -12,7 +12,7 @@ namespace NetCoreStack.Contracts
         public bool IsIdentity { get; set; }
         public bool IsSelectable { get; set; }
         public string DataSourceUrl { get; set; }
-        public int MinimumInputLength { get; set; } = 2;
+        public int MinimumInputLength { get; set; }
         public string[] Args { get; set; }
         public string CascadeFrom { get; set; }
         public string Mask { get; set; }
