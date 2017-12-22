@@ -11,6 +11,7 @@ namespace NetCoreStack.Contracts
         public bool EnableFilter { get; set; }
         public bool IsIdentity { get; set; }
         public bool IsSelectable { get; set; }
+        public bool IsCheckable { get; set; }
         public string DataSourceUrl { get; set; }
         public int MinimumInputLength { get; set; }
         public string[] Args { get; set; }
