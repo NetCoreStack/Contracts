@@ -56,7 +56,7 @@ namespace NetCoreStack.Contracts
                     return values;
                 }
 
-                PropertyInfo[] properties = TypeExtensions.GetProperties(value.GetType());
+                PropertyInfo[] properties = value.GetType().GetProperties();
 
                 for (int i = 0; i < properties.Length; i++)
                 {

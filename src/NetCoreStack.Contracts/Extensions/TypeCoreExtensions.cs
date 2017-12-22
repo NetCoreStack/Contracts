@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -198,16 +197,6 @@ namespace NetCoreStack.Contracts
             return (IEnumerable)Activator.CreateInstance(typeof(List<>).MakeGenericType(new Type[] { elementType }));
         }
 
-        public static string GetDisplayValue(this PropertyInfo propInfo)
-        {
-            var attr = propInfo.GetCustomAttributes(typeof(DisplayAttribute), false) as DisplayAttribute[];
-
-            if (attr == null)
-                return propInfo.Name.ToString();
-
-            return (attr.Length > 0) ? attr[0].Name : propInfo.Name.ToString();
-        }
-
         public static bool EnableFilter(this PropertyInfo propInfo)
         {
             var attr = propInfo.GetCustomAttribute(typeof(PropertyDescriptorAttribute));
@@ -217,27 +206,6 @@ namespace NetCoreStack.Contracts
 
             var attribute = attr as PropertyDescriptorAttribute;
             return attribute.EnableFilter;
-        }
-
-        public static string HasRequiredMessage(this PropertyInfo propInfo)
-        {
-            var attr = propInfo.GetCustomAttribute(typeof(RequiredAttribute));
-
-            if (attr == null)
-                return string.Empty;
-
-            var requiredAttribute = attr as RequiredAttribute;
-            return requiredAttribute.ErrorMessage;
-        }
-
-        public static bool IsRequired(this PropertyInfo propInfo)
-        {
-            var attr = propInfo.GetCustomAttribute(typeof(RequiredAttribute));
-
-            if (attr == null)
-                return false;
-
-            return true;
         }
 
         public static string GetTypeName(this Type type)
