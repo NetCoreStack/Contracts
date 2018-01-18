@@ -5,12 +5,6 @@
         public int ColumnIndex { get; set; }
 
         public ListSortDirection Direction { get; set; }
-
-        public OrderDescriptor(int columnIndex, ListSortDirection direction)
-        {
-            ColumnIndex = columnIndex;
-            Direction = direction;
-        }
     }
 
     public class OrderMemberDescriptor
