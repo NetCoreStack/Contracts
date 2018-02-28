@@ -12,6 +12,7 @@ namespace NetCoreStack.Contracts
         public bool IsIdentity { get; set; }
         public bool IsSelectable { get; set; }
         public bool IsCheckable { get; set; }
+        public bool IsFullDateTime { get; set; }
         public string DataSourceUrl { get; set; }
         public int MinimumInputLength { get; set; }
         public string[] Args { get; set; }

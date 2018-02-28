@@ -6,6 +6,7 @@
         Local = 1,
         Network = 2,
         Ftp = 3,
-        Cloud = 4
+        Cloud = 4,
+        Http = 5
     }
 }

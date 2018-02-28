@@ -1,8 +1,5 @@
 ﻿namespace NetCoreStack.Contracts
 {
-    /// <summary>
-    /// Http request body content type
-    /// </summary>
     public enum ContentType
     {
         ModelAware = 0,

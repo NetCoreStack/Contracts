@@ -29,12 +29,12 @@ namespace NetCoreStack.Contracts
 
     internal static class DictionaryExtensions
     {
-        public static void Merge(this IDictionary<string, object> instance, IDictionary<string, object> from)
+        internal static void Merge(this IDictionary<string, object> instance, IDictionary<string, object> from)
         {
             instance.Merge(from, true);
         }
 
-        public static void Merge(this IDictionary<string, object> instance, IDictionary<string, object> from, bool replaceExisting)
+        internal static void Merge(this IDictionary<string, object> instance, IDictionary<string, object> from, bool replaceExisting)
         {
             foreach (KeyValuePair<string, object> entry in from)
             {
@@ -45,7 +45,7 @@ namespace NetCoreStack.Contracts
             }
         }
 
-        public static IDictionary<string, object> ToDictionary(this object value)
+        internal static IDictionary<string, object> ToDictionary(this object value)
         {
             Dictionary<string, object> dictionary = new Dictionary<string, object>(StringComparer.CurrentCultureIgnoreCase);
             if (value != null)

@@ -5,7 +5,7 @@ namespace NetCoreStack.Contracts
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
     public sealed class ApiTimeoutAttribute : Attribute
     {
-        public TimeSpan Timeout { get; private set; }
+        public TimeSpan Timeout { get; set; }
 
         /// <summary>
         /// Timeout seconds
