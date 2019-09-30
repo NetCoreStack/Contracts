@@ -2,6 +2,5 @@
 {
     public interface IEntity
     {
-        ObjectState ObjectState { get; set; }
     }
 }

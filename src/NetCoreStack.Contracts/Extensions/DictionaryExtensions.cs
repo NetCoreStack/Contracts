@@ -4,29 +4,6 @@ using System.Reflection;
 
 namespace NetCoreStack.Contracts
 {
-    public static class DictionaryExtensionsOf
-    {
-        public static void TransferToKeyList<T, L>(this IDictionary<T, List<L>> from, IDictionary<T, List<L>> to)
-        {
-            foreach (var fromKvp in from)
-            {
-                if (!to.ContainsKey(fromKvp.Key))
-                {
-                    to.Add(fromKvp.Key, fromKvp.Value.GetRange(0, fromKvp.Value.Count));
-                }
-                else
-                {
-                    var list = to[fromKvp.Key];
-                    foreach (var parentItem in fromKvp.Value)
-                    {
-                        if (!list.Contains(parentItem))
-                            list.Add(parentItem);
-                    }
-                }
-            }
-        }
-    }
-
     internal static class DictionaryExtensions
     {
         internal static void Merge(this IDictionary<string, object> instance, IDictionary<string, object> from)

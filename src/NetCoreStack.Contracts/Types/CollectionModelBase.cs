@@ -33,15 +33,12 @@
         [PropertyDescriptor(IsIdentity = true)]
         public TKey Id { get; set; }
 
-        public ObjectState ObjectState { get; set; }
-
         [PropertyDescriptor(Order = -1)]
         public bool? Active { get; set; }
 
         public CollectionModelBase()
         {
             Active = true;
-            ObjectState = ObjectState.Unchanged;
         }
 
         public abstract bool IsNew { get; }
