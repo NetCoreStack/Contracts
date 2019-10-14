@@ -15,5 +15,37 @@ namespace NetCoreStack.Contracts.Tests
             Assert.True(dictionary.ContainsKey("someProperty"));
             Assert.True(dictionary.ContainsKey("intProp"));
         }
+
+        [Fact]
+        public void OrderDescriptorsAscending()
+        {
+            var order = new ColumnOrder
+            {
+                Column = 0,
+                Dir = "asc"
+            };
+
+            var descriptor = order.ConvertToDescriptor("Title");
+
+            Assert.True(descriptor.Direction == ListSortDirection.Ascending);
+            Assert.True(descriptor.ColumnIndex == 0);
+            Assert.True(descriptor.Name == "Title");
+        }
+
+        [Fact]
+        public void OrderDescriptorsDescending()
+        {
+            var order = new ColumnOrder
+            {
+                Column = 1,
+                Dir = "desc"
+            };
+
+            var descriptor = order.ConvertToDescriptor("Firstname");
+
+            Assert.True(descriptor.Direction == ListSortDirection.Descending);
+            Assert.True(descriptor.ColumnIndex == 1);
+            Assert.True(descriptor.Name == "Firstname");
+        }
     }
 }

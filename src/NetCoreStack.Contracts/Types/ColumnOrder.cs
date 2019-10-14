@@ -1,9 +1,8 @@
 ﻿namespace NetCoreStack.Contracts
 {
-    public class Order
+    public class ColumnOrder
     {
-        public string Dir { get; set; }
-
         public int Column { get; set; }
+        public string Dir { get; set; }
     }
 }

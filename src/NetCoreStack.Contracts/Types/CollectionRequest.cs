@@ -18,7 +18,7 @@ namespace NetCoreStack.Contracts
 
         public string Filters { get; set; }
 
-        public IEnumerable<OrderDescriptor> Order { get; set; }
+        public IEnumerable<ColumnOrder> Order { get; set; }
 
         public IEnumerable<Column> Columns { get; set; }
     } 
