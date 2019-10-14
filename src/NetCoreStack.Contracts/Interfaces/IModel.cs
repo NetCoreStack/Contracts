@@ -1,6 +1,6 @@
 ﻿namespace NetCoreStack.Contracts
 {
-    public interface IModelKey<TKey>
+    public interface IModel<TKey>
     {
         TKey Id { get; set; }
     }

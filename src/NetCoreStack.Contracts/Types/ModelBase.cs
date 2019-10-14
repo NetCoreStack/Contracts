@@ -1,6 +1,6 @@
 ﻿namespace NetCoreStack.Contracts
 {
-    public class CollectionModel : CollectionModelBase<long>
+    public class IdModel : ModelBase<long>
     {
         public override bool IsNew
         {
@@ -14,7 +14,7 @@
         }
     }
 
-    public class CollectionModelBson : CollectionModelBase<string>
+    public class KeyModel : ModelBase<string>
     {
         public override bool IsNew
         {
@@ -28,7 +28,7 @@
         }
     }
 
-    public abstract class CollectionModelBase<TKey> : ICollectionModel<TKey>
+    public abstract class ModelBase<TKey> : IModel<TKey>
     {
         [PropertyDescriptor(IsIdentity = true)]
         public TKey Id { get; set; }
@@ -36,7 +36,7 @@
         [PropertyDescriptor(Order = -1)]
         public bool? Active { get; set; }
 
-        public CollectionModelBase()
+        public ModelBase()
         {
             Active = true;
         }

@@ -3,12 +3,12 @@ using Xunit;
 
 namespace NetCoreStack.Contracts.Tests
 {
-    public class SampleModel : CollectionModel
+    public class SampleModel : IdModel
     {
         public string Name { get; set; }
     }
 
-    public class SampleModelBson : CollectionModelBson
+    public class SampleModelBson : KeyModel
     {
         public string Name { get; set; }
     }

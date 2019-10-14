@@ -14,10 +14,19 @@ namespace NetCoreStack.Contracts
             return typeof(IEntity).IsAssignableFrom(type);
         }
 
-        public static bool IsCollection(Type type)
+        public static bool IsIdModel(Type type)
         {
-            if (typeof(CollectionModel).IsAssignableFrom(type) ||
-                typeof(CollectionModelBson).IsAssignableFrom(type))
+            if (typeof(IdModel).IsAssignableFrom(type))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool IsKeyModel(Type type)
+        {
+            if (typeof(KeyModel).IsAssignableFrom(type))
             {
                 return true;
             }
@@ -38,8 +47,8 @@ namespace NetCoreStack.Contracts
                 Type[] interfaces = type.GetInterfaces();
                 for (int i = 0; i < interfaces.Length; i++)
                 {
-                    Type type2 = interfaces[i];
-                    AddInterface(types, type2);
+                    Type intrfc = interfaces[i];
+                    AddInterface(types, intrfc);
                 }
             }
         }
